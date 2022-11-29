@@ -8,7 +8,6 @@ const palindromePermutation = (str) => {
             len++
         }
     }
-    console.log(len)
     let map = {}
     for(let ch of str){
         if(ch != ' '){
@@ -20,7 +19,6 @@ const palindromePermutation = (str) => {
             }
         }
     }
-    console.log(map)
     let evencount = 0
     let oddcount = 0
     for(let item in map){
@@ -31,7 +29,6 @@ const palindromePermutation = (str) => {
             evencount++
         }
     }
-    console.log(oddcount,evencount)
     if(len%2 == 0 && oddcount > 0){
         console.log(false)
         return
