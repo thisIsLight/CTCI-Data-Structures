@@ -2,11 +2,11 @@
 // Challenge : Don't use aditional data structure.
 
 
-//Approach 1
+//Appraoch 1
 
 const isUnique = (param) => {
     let map = {};
-    for(let ch in param){
+    for(let ch of param){
         if(!map[ch]){
             map[ch] = 1
         }
@@ -18,4 +18,19 @@ const isUnique = (param) => {
     console.log('unique');
 }
 
-isUnique(abcdef);
+//Appraoch 2
+
+const isUniqueWithoutObject = (param) => {
+    let bitarray = []
+    for(let ch in param){
+        if(!bitarray[param.charCodeAt(ch)]){
+            bitarray[param.charCodeAt(ch)] = 1
+            console.log(bitarray)
+        }
+        else{
+            console.log('not unique')
+            return
+        }
+    }
+    console.log('unique')
+}
