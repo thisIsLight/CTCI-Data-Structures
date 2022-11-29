@@ -5,7 +5,6 @@
 var removeDups = (list) => {
     let pointer1 = list.head;
     if(!pointer1.next){
-        console.log(flase)
         return;
     }
     while(pointer1.next){
